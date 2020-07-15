@@ -234,6 +234,7 @@ let pins = this.state.places.map((place, i) => {
 						</InfoWindow>
 					
 						
+						{pins}
 						 <Marker google={this.props.google}
 						        name={'Dolores park'}
 						        draggable={true}
@@ -241,7 +242,6 @@ let pins = this.state.places.map((place, i) => {
 						        position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
 						/>
 						<Marker /> 
-						{pins}
 					
 					
 					</GoogleMap>
