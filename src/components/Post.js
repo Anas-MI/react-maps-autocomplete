@@ -112,12 +112,16 @@ class Post extends Component {
 			
                     
                     <div class="form-group">
-                        <label for="email">Post Title:</label>
+                        <label for="pwd">Property Address:</label>
+                        <input type="text" class="form-control" placeholder="Enter password" id="pwd" onChange={(e)=>{this.handleInput(e)}} value={address} name="address"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Property Title:</label>
                         <input type="text" class="form-control" placeholder="Enter Title" id="email" onChange={(e)=>{this.handleInput(e)}} value={title} name="title"/>
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Address:</label>
-                        <input type="text" class="form-control" placeholder="Enter password" id="pwd" onChange={(e)=>{this.handleInput(e)}} value={address} name="address"/>
+                        <label for="email">Describe More about your property: </label>
+                        <input type="text" class="form-control" placeholder="Enter any notes here" id="describe" onChange={(e)=>{this.handleInput(e)}}  name="describemore"/>
                     </div>
                     <Autocomplete
 							style={{
@@ -126,7 +130,8 @@ class Post extends Component {
 								paddingLeft: '16px',
 								marginTop: '0px',
 								// marginBottom: '500px'
-							}}
+                            }}
+                            placeholder={'Search for any address'}
 							onPlaceSelected={ this.onPlaceSelected }
 							types={['(regions)']}
 						/>
